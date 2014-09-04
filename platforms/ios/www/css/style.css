@@ -1,1 +1,7 @@
 /* Empty. Add your own CSS if you like */
+
+.scroll-content{
+  background: url(./../img/BG.jpg) no-repeat center;
+  background-size: 100%;
+  height: 100%;
+}

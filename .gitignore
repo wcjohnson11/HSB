@@ -6,6 +6,8 @@
 *.exe
 *.o
 *.so
+www/img/*
+
  
 # Packages #
 ############
@@ -20,6 +22,8 @@
 *.tar
 *.zip
  
+
+
 # Logs and databases #
 ######################
 *.log

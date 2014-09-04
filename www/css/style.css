@@ -1,1 +1,15 @@
 /* Empty. Add your own CSS if you like */
+
+@media screen and (device-height: 480px) {
+  .scroll-content{
+    background: url(./../img/BG1.jpg) no-repeat center center fixed;
+    background-size: contain;
+  }
+}
+
+@media screen and (device-height: 568px) {
+  .scroll-content{
+    background: url(./../img/BG.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+}
