@@ -17,3 +17,25 @@ angular.module('hsb', ['ionic'])
     }
   });
 })
+
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+
+    .state('home', {
+      url: '/',
+      templateUrl: 'app/pages/main.html',
+      controller: 'mainCtrl'
+    })
+
+    .state('map', {
+      url: '/map',
+      templateUrl: 'app/pages/map.html',
+      controller: 'mapCtrl'
+    })
+
+    .state('faq', {
+      url: '/faq',
+      templateUrl: 'app/pages/faq.html',
+      controller: 'faqCtrl'
+    })
+})
