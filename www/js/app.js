@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'hsb' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('hsb', ['ionic'])
+angular.module('hsb', ['ionic', 'hsb.controllers', 'hsb.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -21,21 +21,28 @@ angular.module('hsb', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('home', {
+    .state('main', {
       url: '/',
-      templateUrl: 'app/pages/main.html',
-      controller: 'mainCtrl'
+      templateUrl: 'pages/main/main.html',
+      controller: 'MainCtrl'
+    })
+
+    .state('home', {
+      url: '/home',
+      templateUrl: 'pages/home/home.html',
+      controller: 'HomeCtrl'
     })
 
     .state('map', {
       url: '/map',
-      templateUrl: 'app/pages/map.html',
-      controller: 'mapCtrl'
+      templateUrl: 'pages/map/map.html',
+      controller: 'MapCtrl'
     })
 
     .state('faq', {
       url: '/faq',
-      templateUrl: 'app/pages/faq.html',
-      controller: 'faqCtrl'
+      templateUrl: 'pages/faq/faq.html',
+      controller: 'FaqCtrl'
     })
+  $urlRouterProvider.otherwise('/');
 })

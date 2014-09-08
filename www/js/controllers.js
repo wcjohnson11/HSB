@@ -1,0 +1,1 @@
+angular.module('hsb.controllers', ['hsb.home', 'hsb.faq', 'hsb.map', 'hsb.main'])
